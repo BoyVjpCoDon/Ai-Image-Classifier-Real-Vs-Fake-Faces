@@ -4,7 +4,8 @@ import torchvision
 from torch import nn
 
 def create_model(num_classes:int=2,
-                 seed:int=42):
+                 seed:int=42,
+                 output_shape:int=2):
   weights=torchvision.models.ResNet50_Weights.DEFAULT
   transforms=weights.transforms
   model=torchvision.models.resnet50(weights=weights)
